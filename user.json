@@ -1,6 +1,6 @@
 {
-    "hello": ["გამარჯობა", "ჰეი", "ჰაი", "ჰელოუ", "სალამი", "გაუმარჯოს", "მოგესალმები", "gamarjoba", "gaumarjos", "hey", "hi", "hello"],
-    "bye": ["ნახვამდის", "კარგად", "შეხვედრამდე", "ბაი", "naxvamdis", "kargad", "shexvedramde", "bye", "goodbye", "good bye", "see you", "see ya", "see you later", "see ya later", "later"]
-    
-    }
+    "hello": ["გამარჯობა", "გამარჯობა ნიკა", "ჰეი", "ჰაი", "ჰელოუ", "სალამი", "გაუმარჯოს", "მოგესალმები", "gamarjoba", "gaumarjos", "hey", "hi", "hello"],
+    "bye": ["ნახვამდის", "კარგად", "შეხვედრამდე", "ბაი", "naxvamdis", "kargad", "shexvedramde", "bye", "goodbye", "good bye", "see you", "see ya", "see you later", "see ya later", "later"],
+    "name": ["რა გქვია", "ვინ ხარ", "ეს რა არის"]
+}
     
