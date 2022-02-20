@@ -19,7 +19,7 @@ def home():
 @app.route("/webhook", methods=["GET", "POST"])
 def receive_message():
     if request.method == "GET":
-        """Before allowing people to message your bot, Facebook has implemented a verify token that confirms all requests that your bot receives came from Facebook."""
+    # Before allowing people to message your bot, Facebook has implemented a verify token that confirms all requests that your bot receives came from Facebook.
         token_sent = request.args.get("hub.verify_token")
         return verify_fb_token(token_sent)
     # if the request was not get, it must be POST and we can just proceed with sending a message back to user
@@ -31,14 +31,8 @@ def receive_message():
             for message in messaging:
                 if message.get("message"):
                     # Facebook Messenger ID for user so we know where to send response back to
-                    recipient_id = message["sender"]["id"]
-                    if message["message"].get("text"):
-                        response_sent_text = brain.get_message(message["message"].get("text"))
-                        send_message(recipient_id, response_sent_text)
-                    # if user sends us a GIF, photo,video, or any other non-text item
-                    if message["message"].get("attachments"):
-                        response_sent_nontext = brain.get_message()
-                        send_message(recipient_id, response_sent_nontext)
+                    send_message(recipient_id=message["sender"]["id"], response=brain.get_message(message["message"].get("text")))
+                    
     return "Message Processed"
 
 
