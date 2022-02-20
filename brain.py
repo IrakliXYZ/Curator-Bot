@@ -14,10 +14,20 @@ from fuzzywuzzy import fuzz
 
 
 
+user = json.loads(open('user.json').read())
+bot = json.loads(open('bot.json').read())
+
 
 
 def get_message(message):
-    if fuzz.ratio(message, 'How soon') > 80:
-        # time.sleep(0.2)
-        return "soooon"
-    # return random.choice(tuple(howsoon))
+    for intent in user:
+        for i in user[intent]:
+            if fuzz.ratio(message, i) > 80:
+                return random.choice(tuple(bot[intent]))
+
+
+# def get_message(message):
+#     for i in hello:
+#         if fuzz.ratio(message, i) > 80:
+#             return random.choice(tuple(hello_resp))
+

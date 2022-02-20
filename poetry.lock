@@ -63,6 +63,14 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "fuzz"
+version = "0.1.1"
+description = "Contains tools for modelling values with associated uncertainty."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "fuzzywuzzy"
 version = "0.18.0"
 description = "Fuzzy string matching in python"
@@ -188,7 +196,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "73f019b3c4735d489742b3d9d0ea5813ed2a6691a48d120467823754c3c712d9"
+content-hash = "ee548dbd265aef14935999fc40505573e2cb871c10b6d596519a40abf09d8acc"
 
 [metadata.files]
 certifi = [
@@ -214,6 +222,9 @@ config = [
 flask = [
     {file = "Flask-2.0.2-py3-none-any.whl", hash = "sha256:cb90f62f1d8e4dc4621f52106613488b5ba826b2e1e10a33eac92f723093ab6a"},
     {file = "Flask-2.0.2.tar.gz", hash = "sha256:7b2fb8e934ddd50731893bdcdb00fc8c0315916f9fcd50d22c7cc1a95ab634e2"},
+]
+fuzz = [
+    {file = "fuzz-0.1.1-py3-none-any.whl", hash = "sha256:b8a301841cb62bb2498de13fd3b9e8a62608a7fd1d0c0b904c3e6c6945509d3f"},
 ]
 fuzzywuzzy = [
     {file = "fuzzywuzzy-0.18.0-py2.py3-none-any.whl", hash = "sha256:928244b28db720d1e0ee7587acf660ea49d7e4c632569cad4f1cd7e68a5f0993"},
